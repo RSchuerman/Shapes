@@ -2,7 +2,7 @@
 
 namespace Shapes
 {
-    public class Circle
+    public class Circle : Shape
     {
         //Fields
         public double _radius;
@@ -32,14 +32,14 @@ namespace Shapes
         }
 
         //Methods
-        public double CalculateArea()
+        public override double CalculateArea()
         {
             double area = 0;
             area = _radius * _radius * Math.PI;
             return area;
         }
 
-        public double CalculateCircumference()
+        public override double CalculatePerimeter()
         {
             double perimeter = 0;
             perimeter = _radius * 2 * Math.PI;

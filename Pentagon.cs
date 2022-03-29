@@ -2,7 +2,7 @@
 
 namespace Shapes
 {
-    public class Pentagon
+    public class Pentagon : Shape
     {
         //Fields
         public double _lengthOfSide;
@@ -32,14 +32,14 @@ namespace Shapes
         }
 
         //Methods
-        public double CalculateArea()
+        public override double CalculateArea()
         {
             double area = 0;
             area = 0.25 * Math.Sqrt(5 * (5 + Math.Sqrt(20))) * Math.Pow(_lengthOfSide, 2);
             return area;
         }
 
-        public double CalculatePerimeter()
+        public override double CalculatePerimeter()
         {
             double perimeter = 0;
             perimeter = _lengthOfSide * 5;

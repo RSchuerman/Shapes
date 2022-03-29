@@ -2,7 +2,7 @@
 
 namespace Shapes
 {
-    public class Ellipse
+    public class Ellipse : Shape
     {
         //Fields
         public double _semiMajorAxis;
@@ -37,14 +37,14 @@ namespace Shapes
         }
 
         //Methods
-        public double CalculateArea()
+        public override double CalculateArea()
         {
             double area = 0;
             area = Math.PI * _semiMajorAxis * _semiMinorAxis;
             return area;
         }
 
-        public double CalculatePerimeter()
+        public override double CalculatePerimeter()
         {
             double perimeter = 0;
             double approximation1 = 0;

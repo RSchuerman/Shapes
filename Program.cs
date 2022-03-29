@@ -22,7 +22,7 @@ namespace Shapes
             Circle circleA = new Circle();
             circleA._radius = 5;
             double circleArea = circleA.CalculateArea();
-            double circlePerimeter = circleA.CalculateCircumference();
+            double circlePerimeter = circleA.CalculatePerimeter();
             Console.WriteLine("CIRCLE:  Area: " + circleArea + " Perimeter: " + circlePerimeter);
 
             Ellipse ellipseA = new Ellipse();

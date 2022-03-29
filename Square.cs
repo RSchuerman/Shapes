@@ -2,7 +2,7 @@
 
 namespace Shapes
 {
-    public class Square
+    public class Square : Shape
     {
         //Fields
         public double _lengthOfSide;
@@ -32,18 +32,19 @@ namespace Shapes
         }
 
         //Methods
-        public double CalculateArea()
+        public override double CalculateArea()
         {
             double area = 0;
             area = _lengthOfSide * _lengthOfSide;
             return area;
         }
 
-        public double CalculatePerimeter()
+        public override double CalculatePerimeter()
         {
             double perimeter = 0;
             perimeter = _lengthOfSide * 4;
             return perimeter;
         }
+
     }
 }

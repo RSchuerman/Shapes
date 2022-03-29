@@ -2,7 +2,7 @@
 
 namespace Shapes
 {
-    public class Rectangle
+    public class Rectangle : Shape
     {
         //Fields
         public double _width;
@@ -37,18 +37,47 @@ namespace Shapes
         }
 
         //Methods
-        public double CalculateArea()
+        public override double CalculateArea()
         {
             double area = 0;
             area = _width * _height;
             return area;
         }
 
-        public double CalculatePerimeter()
+        public override double CalculatePerimeter()
         {
             double perimeter = 0;
             perimeter = _width * 2 + _height * 2;
             return perimeter;
+        }
+        //public static double CalculatePerimeter()
+        //{
+        //    double perimeter = 0;
+        //    return perimeter;
+        //}
+        public static bool operator <(Rectangle self, Rectangle other)
+        {
+            return false;
+        }
+        public static bool operator <=(Rectangle self, Rectangle other)
+        {
+            return false;
+        }
+        public static bool operator >(Rectangle self, Rectangle other)
+        {
+            return false;
+        }
+        public static bool operator >=(Rectangle self, Rectangle other)
+        {
+            return false;
+        }
+        public static bool operator =(Rectangle self, Rectangle other)
+        {
+            return false;
+        }
+        public static bool operator !=(Rectangle self, Rectangle other)
+        {
+            return false;
         }
     }
 
