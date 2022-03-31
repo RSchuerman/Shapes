@@ -50,34 +50,48 @@ namespace Shapes
             perimeter = _width * 2 + _height * 2;
             return perimeter;
         }
-        //public static double CalculatePerimeter()
-        //{
-        //    double perimeter = 0;
-        //    return perimeter;
-        //}
+
         public static bool operator <(Rectangle self, Rectangle other)
         {
-            return false;
+            if (self.CalculateArea() < other.CalculateArea() && self.CalculatePerimeter() < other.CalculatePerimeter())
+                return true;
+            else
+                return false;
         }
         public static bool operator <=(Rectangle self, Rectangle other)
         {
-            return false;
+            if (self.CalculateArea() <= other.CalculateArea() && self.CalculatePerimeter() <= other.CalculatePerimeter())
+                return true;
+            else
+                return false;
         }
         public static bool operator >(Rectangle self, Rectangle other)
         {
-            return false;
+            if (self.CalculateArea() > other.CalculateArea() && self.CalculatePerimeter() > other.CalculatePerimeter())
+                return true;
+            else
+                return false;
         }
         public static bool operator >=(Rectangle self, Rectangle other)
         {
-            return false;
+            if (self.CalculateArea() >= other.CalculateArea() && self.CalculatePerimeter() >= other.CalculatePerimeter())
+                return true;
+            else
+                return false;
         }
-        public static bool operator =(Rectangle self, Rectangle other)
+        public static bool operator ==(Rectangle self, Rectangle other)
         {
-            return false;
+            if( self.CalculateArea() == other.CalculateArea() && self.CalculatePerimeter() == other.CalculatePerimeter() )
+                return true;
+            else
+                return false;
         }
         public static bool operator !=(Rectangle self, Rectangle other)
         {
-            return false;
+            if (self.CalculateArea() == other.CalculateArea() && self.CalculatePerimeter() == other.CalculatePerimeter())
+                return false;
+            else
+                return true;
         }
     }
 
